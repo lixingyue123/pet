@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到宠物医院</title>
+    <style>
+        body{
+            background: #dff1ff;
+        }
+        #container {margin:0 auto;padding:0;width:1000px;}
+
+        #header {margin:0;padding:0;width:1000px;}
+        #header h1{float: contour;
+            font-family: "宋体", Arial, Verdana;
+        }
+        #selecter {margin:10px;padding:0;width:1000px;}
+        #selecter h3{
+            float: contour;
+            font-family: "宋体", Arial, Verdana;
+        }
+        #inserter {margin:10px;padding:0;width:1000px;}
+        #inserter h3{
+            float: contour;
+            font-family: "宋体", Arial, Verdana;
+        }
+        #deleter {margin:10px;padding:0;width:1000px;}
+        #deleter h3{
+            float: contour;
+            font-family: "宋体", Arial, Verdana;
+        }
+        #updater {margin:10px;padding:0;width:1000px;}
+        #updater h3{
+            float: contour;
+            font-family: "宋体", Arial, Verdana;
+        }
+
+
+    </style>
+</head>
+<body>
+<center>
+    <div id="container">
+        <div id="header">
+            <h1>宠物医院管理系统</h1>
+        </div>
+
+<!--        <a href="/petHospital"><button>点我跳转</button></a>-->
+
+        <span id="msg1"  th:utext="${msg1}">login successfully</span><br>
+        <!--    <span  th:utext="${info}">login successfully</span><br>-->
+        <div id="inserter">
+            <form role="form" action="Insert1" method="post">
+                <h3>插入宠物就医信息</h3>
+                <div class="inputBox">
+                    petID:<input type="text" id="id" name="id"><br>
+                </div>
+
+                petName:<input type="text" id="name" name="name"><br>
+                age:<input type="text" id="Age" name="Age"><br>
+                sex:<input type="text" id="Sex" name="Sex"><br>
+                time:<input type="text" id="time" name="time"><br>
+                attention:<input type="text" id="attention" name="attention"><br>
+                <!--        <span id="msg"  th:utext="${msg}">login successfully</span><br>-->
+                <input type="submit" id="insert1" value="insert1">
+            </form>
+        </div>
+        <div id="deleter">
+            <form role="form" action="Delete1" method="post">
+                <h3>删除宠物就医信息</h3>
+                petID:<input type="text" id="did" name="id"><br>
+                <input type="submit" id="delete1" value="delete1">
+            </form>
+        </div>
+        <div id="updater">
+            <form role="form" action="/update1" method="post">
+                <h3>更新宠物就医信息</h3>
+                petID:<input type="text" id="id" name="id"><br>
+                petName:<input type="text" id="name" name="name"><br>
+                age:<input type="text" id="Age" name="Age"><br>
+                sex:<input type="text" id="Sex" name="Sex"><br>
+                time:<input type="text" id="time" name="time"><br>
+                attention:<input type="text" id="attention" name="attention"><br>
+                <button type="submit">更新</button>
+            </form>
+        </div>
+
+        <div id="selecter">
+            <form role="form" action="/SelectAll" method="post">
+                <h3>宠物信息查询</h3>
+                <button type="submit">查询</button>
+                <div  th:utext="${info}">login successfully</div><br>
+            </form>
+        </div>
+
+    </div>
+
+
+</center>
+</body>
+</html>

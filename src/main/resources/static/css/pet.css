@@ -1,0 +1,9 @@
+body{
+            background:url("./背景.jpg");
+        }
+#container {margin:0 auto;padding:0;width:1000px;}
+
+#header {margin:0;padding:0;width:1000px;}
+#header h1{float: contour;
+    font-family: "宋体", Arial, Verdana;
+}

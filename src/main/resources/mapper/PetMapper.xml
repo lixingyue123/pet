@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootdemo.mapper.PetMapper">
+
+    <delete id="delete1" parameterType="int">
+    delete from medical_record where pet_ID=#{id}
+</delete>
+
+    <insert id="insert1" parameterType="com.example.springbootdemo.bean.petstore">
+    insert into medical_record(pet_ID,pet_Name,Age,Sex,visit_time,visit_attention) values (#{id},#{name},#{Age},#{Sex},#{time},#{attention})
+</insert>
+
+    <select id="selectAll"  resultType="com.example.springbootdemo.bean.petstore">
+        select * from medical_record ;
+    </select>
+
+    <update id="update" >
+    update medical_record set pet_Name=#{name},Age=#{Age},Sex=#{Sex},visit_time=#{time},visit_attention=#{attention} where pet_ID=#{id}
+</update>
+
+</mapper>

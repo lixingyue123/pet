@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--lalalalalala-->
+<!--<br>-->
+<!--<span th:text="${msg}">span默认文本内容</span><br/>-->
+<!--&lt;!&ndash;th:text；改变当前元素里面的文本内容；&ndash;&gt;-->
+<!--<br>-->
+<!--id: <span th:text="${blog.id}">xx</span>-->
+<!--name: <span th:text="${blog.name}">xxx</span>-->
+<!--pwd: <span th:text="${blog.password}">xxx</span>-->
+<!--<br>-->
+
+<!--<span th:text="${msg}">span默认文本内容</span><br/>-->
+<!--<div th:object="${blog}">-->
+<!--    id: <span th:text="*{id}">xxx</span>-->
+<!--    name: <span th:text="*{name}">xxx</span>-->
+<!--    age: <span th:text="*{password}">xxx</span>-->
+
+<!--    <br/>-->
+<!--    id: <span th:text="${blog.id}">xxx</span>-->
+<!--    name: <span th:text="${blog.name}">xxx</span>-->
+<!--    age: <span th:text="${blog.password}">xxx</span>-->
+<!--</div>-->
+<!--<br>-->
+
+<!--<a href="test.html" th:href="'http://localhost:8080/blog?id=' + ${blog.id}">博客id</a>-->
+<!--<a href="#" th:href="@{'http://localhost:8080/blog?id=' + ${blog.id}}">博客id</a>-->
+<!--<br>-->
+
+<!--<form th:action="@{/blog}">-->
+<!--    id:<input type="text" name="id" value=""/>-->
+<!--    <input type="submit" value="提交" />-->
+<!--</form>-->
+<!--<br>-->
+
+<!--<p th:each="blog: ${blogList}">-->
+<!--    <span th:text="${blog.id}" >xxx</span>-->
+<!--    <span th:text="${blog.name}" >xxx</span>-->
+<!--    <span th:text="${blog.password}" >xxx</span>-->
+<!--</p>-->
+<!--<br>-->
+
+<tr>
+    <td>昵称：</td>
+    <td th:switch="${blog.id}">
+        <span th:case="1">一心</span>
+        <span th:case="2">张三</span>
+    </td>
+</tr>
+
+</body>
+</html>
